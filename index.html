@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VidRepo</title>
+  <style>
+    html,body{height:100%;margin:0;background:#000;color:#fff;font-family:sans-serif}
+    main{
+      height:100vh;
+      overflow-y:auto;
+      scroll-snap-type:y mandatory;
+      -webkit-overflow-scrolling:touch;
+    }
+    section.video-section{
+      height:100vh;
+      display:grid;
+      place-items:center;
+      scroll-snap-align:start;
+      background:#000;
+      position:relative;
+    }
+    .video-wrapper{
+      width:100%;
+      height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    video{
+      max-width:100%;
+      max-height:100%;
+      width:auto;
+      height:auto;
+      object-fit:contain;
+      background:#000;
+      display:block;
+    }
+    .caption{
+      position:absolute;
+      left:12px;
+      bottom:12px;
+      font-size:13px;
+      background:rgba(0,0,0,0.4);
+      padding:6px 8px;
+      border-radius:6px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- Add one <section> per video you place in the folder -->
+    <section class="video-section" id="collumn_collapse">
+      <div class="video-wrapper">
+        <video controls preload="metadata" src="videos/animation_4.mp4" type="video/mp4" loop autoplay></video>
+      </div>
+      <div class="caption"></div>
+    </section>
+
+    <!-- <section class="video-section">
+      <div class="video-wrapper">
+        <video controls preload="metadata" src="videos/video2.mp4"></video>
+      </div>
+      <div class="caption"></div>
+    </section> -->
+
+    <!-- Duplicate the section above for each video you add to the "videos" folder -->
+  </main>
+</body>
+</html>
